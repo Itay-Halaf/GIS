@@ -1,0 +1,3 @@
+/.text
+/.GIS-docs
+/.CSV_GIS_files

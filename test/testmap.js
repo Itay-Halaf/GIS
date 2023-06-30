@@ -40,6 +40,13 @@ let dataDisplay = payload.filter((eventData)=>{
 
 
 function showExample(){
+
+    govmap.geocode({keyword: 'הרצל', type: govmap.geocodeType.FullResult}
+    ).then(function(response){
+        console.log(response)
+    });  
+
+
     // govmap.showMeasure();  
     // govmap.draw(drawType); 
     // govmap.draw(govmap.drawType.Circle).progress(function (response)  
@@ -53,21 +60,21 @@ function showExample(){
     // ).then(function(response){
     //     console.log(response)
     // });  
-    var params = {
-        LayerName: 'bus_stops',
-        Point: {x: x, y: y},
-        Radius:30
-    };
-   govmap.getLayerData(params).then(function(response){
-       console.log(response);
-   });  
-    }
+//     var params = {
+//         LayerName: 'bus_stops',
+//         Point: {x: x, y: y},
+//         Radius:30
+//     };
+//    govmap.getLayerData(params).then(function(response){
+//        console.log(response);
+//    });  
+//     }
 
-    function zoomToConrdinate(){
-            govmap.zoomToXY(
-        {x: x ,y:y ,level:5,marker: true}
-        );  
-    }
-    function clearMarker(){
-        govmap.clearMapMarker();  
+//     function zoomToConrdinate(){
+//             govmap.zoomToXY(
+//         {x: x ,y:y ,level:5,marker: true}
+//         );  
+//     }
+//     function clearMarker(){
+//         govmap.clearMapMarker();  
     }

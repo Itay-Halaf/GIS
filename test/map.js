@@ -4,12 +4,12 @@ $(document).ready(function () {
   govmap.createMap('map',
       {
           token: location.hostname === 'localhost' ? '5a4b8472-b95b-4687-8179-0ccb621c7990' : '23233477-3185-4bc4-9200-71cbb1b2b5b5',
-          visibleLayers: ["f_natural"],
-          layers: ["atractions","f_natural","ilezor","atikot_sites_itm","ilPublicSites_June05"],
+          visibleLayers: ["TEMP_BRIDGE"],
+          layers: ["TEMP_BRIDGE"],
           showXY: true,
           identifyOnClick: true,
-          level: 5,
-          center:{x:180760,y:647870},
+          level: 4,
+          center:{x:178586.579,y:666130.0514},
           layersMode: 2,
           zoomButtons: true
       });
