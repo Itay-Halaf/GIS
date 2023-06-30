@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>Trippo</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js"></script>
+  <link rel="icon" href="./images/Pure-water-logo.png">
+  <script type="text/javascript" src="./map.js"></script>
 
 
 <!-- Here The map code -->
@@ -19,13 +20,20 @@
       <button class ="btn" id="search-btn" type="submit">Search</button>
     </form>
     <!-- Add more navigation elements here if needed -->
-    <button id="darkMode" class="btn loading-animation">Home</button>
-    <button id="darkMode" class="btn loading-animation">Project Git</button>
-    <button id="darkMode" class="btn loading-animation">About</button>
-
+    <a href="https://www.hit.ac.il/">
+        <button class="btn loading-animation">Home</button>
+    </a>
+    
+    <a href="https://github.com/Itay-Halaf/GIS">
+        <button class="btn loading-animation"> Git Project</button>
+    </a>
+    
+    <a>
+        <button class="btn loading-animation">About us</button>
+    </a>
   </div>
-  <div class="map-container" id="map">
-
+  <div class="map-container">
+    <iframe id='map' src= 'https://www.govmap.gov.il/map.html?bb=1&zb=1&in=1&c=${x},${y}&z=5' > </iframe>
   </div>
   
 </body>
