@@ -5,7 +5,12 @@
   <title>Trippo</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="./images/Pure-water-logo.png">
-  <script type="text/javascript" src="./map.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+  <script src="https://www.govmap.gov.il/govmap/api/govmap.api.js"></script>
+  <script src="https://es.govmap.gov.il/TldSearch/Scripts/ac.js"></script>
+  <script type="text/javascript" src="map.js"></script>
+
+  <link rel="stylesheet" href="https://es.govmap.gov.il/TldSearch/Scripts/ac.css">
 
 
 <!-- Here The map code -->
@@ -15,25 +20,32 @@
 
   <div class="navbar">
     <img src="./images/Pure-water-logo.png" alt="Logo" class="logo">
+    
     <form class="search-bar" action="#" method="get">
-      <input class="search-input" type="text" name="search" placeholder="Search...">
+      <input id="starting_point" class="search-input" type="text" name="search" placeholder="Search...">
       <button class ="btn" id="search-btn" type="submit">Search</button>
     </form>
     <!-- Add more navigation elements here if needed -->
     <a href="https://www.hit.ac.il/">
         <button class="btn loading-animation">Home</button>
-    </a>
-    
-    <a href="https://github.com/Itay-Halaf/GIS">
-        <button class="btn loading-animation"> Git Project</button>
-    </a>
-    
-    <a>
+    </a>    
+    <!-- <a>
         <button class="btn loading-animation">About us</button>
-    </a>
+    </a>   -->
+  <a>
+    <button onClick="paintline()" class="btn loading-animation">Draw Track</button>
+  </a>
+  <a>
+    <button onClick="clearMap()" class="btn loading-animation">Clean Map</button>
+</a>
+  <a href="https://github.com/Itay-Halaf/GIS">
+    <button class="btn loading-animation">Git Project</button>
+</a>
   </div>
   <div class="map-container">
-    <iframe id='map' src= 'https://www.govmap.gov.il/map.html?bb=1&zb=1&in=1&c=${x},${y}&z=5' > </iframe>
+    <div id="map">
+    </div>
+    <!-- <iframe id='map' src= 'https://www.govmap.gov.il/map.html?bb=1&zb=1&in=1&c=230550,${y}&z=5' > </iframe> -->
   </div>
   
 </body>
